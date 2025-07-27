@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Global Scholarship Hub</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: url('https://images.unsplash.com/photo-1605379399642-870262d3d051?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
+      background-size: cover;
+      color: #f5eeee;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.5);
+      z-index: -1;
+    }
+
+    header {
+      background: rgba(0, 51, 102, 0.85);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      border-bottom: 5px solid #ffc107;
+    }
+
+    nav {
+      background-color: rgba(0, 85, 165, 0.9);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: white;
+      margin: 8px 15px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+      color: #ffc107;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .scholarship, form, .auth, #eligibility {
+      background: rgba(21, 4, 4, 0.97);
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(43, 17, 17, 0.2);
+    }
+
+    form input, form textarea, form select {
+      width: 100%;
+      padding: 12px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #0f0606;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    form button {
+      background: #ffc107;
+      color: #003366;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 16px;
+      transition: background 0.3s;
+    }
+
+    form button:hover {
+      background: #e0a800;
+    }
+
+    footer {
+      background-color: rgba(0, 51, 102, 0.85);
+      color: rgb(16, 4, 4);
+      padding: 20px;
+      text-align: center;
+      margin-top: 40px;
+      border-top: 3px solid #ffc107;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      section {
+        padding: 20px 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Global Scholarship Hub</h1>
+    <p>Apply for global scholarships and secure your academic future.</p>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#application">Apply</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section>
+    <h2>Scholarship Application</h2>
+    <form action="https://formsubmit.co/mojuemmanuel6@gmail.com" method="POST" enctype="multipart/form-data">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="text" name="full_name" placeholder="Full Name" required>
+      <input type="email" name="email" placeholder="Email Address" required>
+      <input type="text" name="country" placeholder="Country of Residence" required>
+      <input type="number" name="age" placeholder="Age" required>
+      <select name="education_level" required>
+        <option value="">Level of Education</option>
+        <option value="High School">High School</option>
+        <option value="Diploma">Diploma</option>
+        <option value="Bachelor's">Bachelor's Degree</option>
+        <option value="Master's">Master's Degree</option>
+        <option value="PhD">PhD</option>
+      </select>
+
+      <textarea name="motivation" placeholder="Why do you deserve this scholarship?" rows="5" required></textarea>
+      <label>Upload Required Documents</label>
+      <input type="file" name="documents" required>
+
+      <h3>Payment Information</h3>
+      <p>Pay UGX 50,000 via Mobile Money before submitting.</p>
+      <select name="payment_network" required>
+        <option value="">Select Mobile Money Network</option>
+        <option value="MTN">MTN Mobile Money</option>
+        <option value="Airtel">Airtel Money</option>
+      </select>
+      <input type="text" name="transaction_id" placeholder="Transaction ID (e.g. MOMO123456789)" required>
+      <label>Upload Payment Screenshot (Optional)</label>
+      <input type="file" name="payment_proof" accept="image/*">
+
+      <button type="submit">Submit Application</button>
+    </form>
+  </section>
+
+  <footer id="contact">
+    &copy; 2025 Global Scholarship Hub | Email: info@scholarhub.org | tell: +256784484300
+  </footer>
+</body>
+</html>
